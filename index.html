@@ -1,12 +1,10 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work It Out</title>
     <!--*Tailwind linking-->
-    <script rel="stylesheet" src="https://cdn.tailwindcss.com">
-    </script>
+    <script rel="stylesheet" src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
@@ -19,37 +17,35 @@
         <nav
           class="container navbar flex w-full sm:grid sm:grid-cols-1 lg:flex"
         >
-          <div class="id = navigationBarOne">
-            <div
-              class="navigation justify-start sm:flex sm:justify-center lg:flex lg:justify-start lg:content-bottom"
-            >
-              <a href="#Weight Lifting">Weight Lifting</a>
-              <a href="#HIIT">HIIT</a>
-              <a href="#Walking">Walking</a>
-              <a href="#Yoga">Yoga</a>
-            </div>
-          </div>
-        </nav>
-        <nav
-          class="container navbar flex w-full sm:grid sm:grid-cols-1 lg:flex"
-          id="navigationBarTwo"
-        >
           <div
+            id="navigationBarOne"
             class="navigation justify-start sm:flex sm:justify-center lg:flex lg:justify-start lg:content-bottom"
           >
+            <a href="#Weight Lifting">Weight Lifting</a>
+            <a href="#HIIT">HIIT</a>
+            <a href="#Walking">Walking</a>
+            <a href="#Yoga">Yoga</a>
           </div>
-          <a href="#Nutrition">Nutrition</a>
-          <a href="/Home">Work It Out</a>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
+        </nav>
+        <div
+          class="container navbar flex w-full sm:grid sm:grid-cols-1 lg:flex"
+        >
+          <nav
+            id="navigationBarTwo"
+            class="navigation justify-start sm:flex sm:justify-center lg:flex lg:justify-start lg:content-bottom"
+          >
+            <a href="#Nutrition">Nutrition</a>
+            <a href="/Home">Work It Out</a>
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
             <a href="/MyAccount">MyAccount</a>
             |
             <button class="no-button" id="logout">logout</button>
-          {{else}}
+            {{else}}
             <a href="/login">Login</a>
-          {{/if}}
-        </nav>
-
+            {{/if}}
+          </nav>
+        </div>
       </header>
 
       <main
@@ -58,14 +54,11 @@
         {{{body}}}
       </main>
 
-      <footer>
-
-      </footer>
+      <footer></footer>
     </div>
 
     {{#if logged_in}}
-      <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
   </body>
-
 </html>
