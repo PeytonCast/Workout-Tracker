@@ -1,43 +1,41 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work It Out</title>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
     <!--*Tailwind linking-->
-    <script rel="stylesheet" src="https://cdn.tailwindcss.com">
-    </script>
+    <script rel="stylesheet" src="https://cdn.tailwindcss.com"></script>
+    <!--*Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trirong"
+    />
   </head>
 
   <body>
     <div class="container">
       <!--This contains the two navbars split into two. 
         One contains the categories for exercises, the other contains user info -->
-      <header
-        class="text-center h-1 w-screen border bg-blue-600 sm:flex sm:justify-center sm:h-auto lg:flex lg:justify-center"
+      <nav
+        class="container-fluid w-screen flex h-12 sm:grid sm:grid-cols-1 bg-slate-600 justify-start sm:flex sm:justify-center lg:flex"
       >
-        <nav
-          class="container navbar flex w-full sm:grid sm:grid-cols-1 lg:flex"
-        >
-          <div class="id = navigationBarOne">
-            <div
-              class="navigation justify-start sm:flex sm:justify-center lg:flex lg:justify-start lg:content-bottom"
-            >
-              <a href="#Weight Lifting">Weight Lifting</a>
-              <a href="#HIIT">HIIT</a>
-              <a href="#Walking">Walking</a>
-              <a href="#Yoga">Yoga</a>
-            </div>
-          </div>
-        </nav>
-        <nav
-          class="container navbar flex w-full sm:grid sm:grid-cols-1 lg:flex"
-          id="navigationBarTwo"
-        >
-          <div
-            class="navigation justify-start sm:flex sm:justify-center lg:flex lg:justify-start lg:content-bottom"
-          >
-          </div>
+        <div class="navbar">
+
+          <a href="#Weight Lifting">Weight Lifting</a>
+          <a href="#HIIT">HIIT</a>
+          <a href="#Walking">Walking</a>
+          <a href="#Yoga">Yoga</a>
+
+        </div>
+      </nav>
+      <nav
+        class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-300 justify-start sm:flex sm:justify-center lg:flex"
+      >
+        <div class="navbar">
+
           <a href="#Nutrition">Nutrition</a>
           <a href="/Home">Work It Out</a>
           <!-- Conditionally render login or logout links -->
@@ -48,13 +46,10 @@
           {{else}}
             <a href="/login">Login</a>
           {{/if}}
-        </nav>
+        </div>
+      </nav>
 
-      </header>
-
-      <main
-        class="p-6 w-screen flex h-100 sm:grid lg:flex justify-evenly content-evenly"
-      >
+      <main class="w-screen h-100">
         {{{body}}}
       </main>
 
