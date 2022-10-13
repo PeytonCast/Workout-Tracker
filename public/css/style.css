@@ -1,0 +1,128 @@
+body {
+  font-family: "Trirong", serif;
+}
+
+.picture {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/istockphoto-470740114-612x612.jpeg");
+  height: 80vh;
+  min-width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.picture-text {
+  text-align: center;
+  font-size: 100px;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.picture-text button {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: large;
+  background-color: white;
+  color: #555;
+}
+
+#workout {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/6326aa72-196f-4d99-8a44-295b8b355d91.webp");
+  height: 68vh;
+  min-width: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.workout-text button {
+  text-align: center;
+  font-size: 40px;
+  border: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#goals {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/360_F_195778018_I0HZNA0sCNIXKe5ydiXvQXOl6AfbkJGt.jpeg");
+  height: 68vh;
+  min-width: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.goals-text button {
+  text-align: center;
+  font-size: 40px;
+  border: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#challenges {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/xbreak-workout_602724.jpg.pagespeed.ic.v8byD7su-e.jpg");
+  height: 68vh;
+  min-width: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.challenges-text button {
+  text-align: center;
+  font-size: 40px;
+  border: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#nutrition {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/ListeningToYourBody_en9d82ec5a7bfe4a9b878d900bcd801308.jpeg");
+  height: 68vh;
+  min-width: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.nutrition-text button {
+  text-align: center;
+  font-size: 40px;
+  border: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.navbar a {
+  padding: 80px;
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+}
