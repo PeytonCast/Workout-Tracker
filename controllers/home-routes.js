@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 // GET all content for homepage
 router.get('/', async (req, res) => {
-    res.render('home');
+    res.render('home', { loggedIn : req.session.loggedIn });
 });
 
   // Login route

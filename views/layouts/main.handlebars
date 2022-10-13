@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<nav>
+     {{#if loggedIn}}
+     <button id="logout">logout</button>
+     {{else}}
+    <a href="/login">login</a>
+     {{/if}}
+</nav>
 <body>
     {{{body}}}
 </body>
+</main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </html>
