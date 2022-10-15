@@ -8,9 +8,13 @@ router.get('/', async (req, res) => {
 });
 
   // Login route
-  router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login');
-  });
+});
+
+router.get('/goals', async(req, res) => {
+   res.render('goals', {})
+})
 
   
 module.exports = router;
