@@ -12,9 +12,28 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/goals', async(req, res) => {
-   res.render('goals', {})
+// program route
+router.get('/programs', withAuth, async(req, res) => {
+   res.render('programs', {})
 })
+
+// challenge route
+router.get('/challenges', async(req, res) => {
+  res.render('challenges', {})
+})
+
+// nutrition route
+router.get('/nutrition', async(req, res) => {
+  res.render('nutrition', {})
+})
+
+// workouts route
+router.get('/workouts', async(req, res) => {
+  res.render('workouts', {})
+})
+
+
+
 
   
 module.exports = router;
