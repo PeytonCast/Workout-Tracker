@@ -38,11 +38,11 @@
 
           <a href="#Nutrition">Nutrition</a>
           <a href="/Home">Work It Out</a>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
+          <!-- Conditionally render login or logout links class="no-button" -->
+          {{#if loggedIn}}
+            
             <a href="/MyAccount">MyAccount</a>
-            |
-            <button class="no-button" id="logout">logout</button>
+           <button id="logout">logout</button>
           {{else}}
             <a href="/login">Login</a>
           {{/if}}
@@ -58,7 +58,7 @@
       </footer>
     </div>
 
-    {{#if logged_in}}
+    {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
   </body>
