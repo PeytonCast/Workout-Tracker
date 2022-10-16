@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+const nodemailer = require('nodemailer')
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -12,7 +12,28 @@ router.post('/', async (req, res) => {
       password: req.body.password,
       
     });
-    
+    const transporter = nodemailer.createTransport({
+      service: "hotmail",
+      auth: {
+        user:"work-it-out2022@outlook.com",
+        pass:`${process.env.EMAIL_PASS}`
+      }})
+    const options = {
+      from: "work-it-out2022@outlook.com",
+      to: `${dbUserData.email}`,
+      subject: "Welcome to WorkitOut!",
+      text: `
+      Hello ${dbUserData.username},
+      Your account has 
+      successfuly been created! 
+      Are you ready to work it out?
+      `
+    }
+    transporter.sendMail(options, function (err, info) {
+        if (err) { console.log(err)
+           return;}
+           console.log("sent: " + info.response)
+       })
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.loggedIn = true;

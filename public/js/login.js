@@ -1,3 +1,4 @@
+// const nodemailer = require('nodemailer');
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -25,7 +26,8 @@ const loginFormHandler = async (event) => {
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-  
+    
+    
     if (username && email && password) {
       const response = await fetch('/api/users/', {
         method: 'POST',
@@ -34,7 +36,10 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        
         document.location.replace('/');
+
+       
       } else {
         alert('The username you chose is already taken.');
       }
