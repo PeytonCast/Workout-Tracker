@@ -1,12 +1,11 @@
 // content belongs to user
 // a user can have many contents but a content can only have on user
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
-
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
 
 class User extends Model {
-//   custom method to check password 
+  //   custom method to check password
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -23,7 +22,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     email: {
      type: DataTypes.STRING,
@@ -42,7 +41,7 @@ User.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) =>{
+      beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 7);
         return newUserData;
       },
@@ -55,7 +54,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
 );
 
