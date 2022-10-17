@@ -8,9 +8,41 @@ router.get('/', async (req, res) => {
 });
 
   // Login route
-  router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login');
-  });
+});
+
+// signup route
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+router.get('/success', (req, res) => {
+  res.render('success');
+});
+
+// program route
+router.get('/programs', withAuth, async(req, res) => {
+   res.render('programs', {})
+})
+
+// challenge route
+router.get('/challenges', withAuth, async(req, res) => {
+  res.render('challenges', {})
+})
+
+// nutrition route
+router.get('/nutrition', withAuth, async(req, res) => {
+  res.render('nutrition', {})
+})
+
+// workouts route
+router.get('/workouts', withAuth, async(req, res) => {
+  res.render('workouts', {})
+})
+
+
+
 
   
 module.exports = router;
