@@ -17,6 +17,10 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/success', (req, res) => {
+  res.render('success');
+});
+
 // program route
 router.get('/programs', withAuth, async(req, res) => {
    res.render('programs', {})
