@@ -1,11 +1,11 @@
 // content belongs to user
 // a user can have many contents but a content can only have on user
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
+const sequelize = require('../config/connection');
 
 class User extends Model {
-  //   custom method to check password
+//   custom method to check password 
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -23,13 +23,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-    },
-    email: {
-     type: DataTypes.STRING,
-     allowNull: false,
-     validate: {
-      isEmail: true
-     }
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+         isEmail: true
+        }
     },
     password: {
       type: DataTypes.STRING,
@@ -38,23 +37,30 @@ User.init(
         len: [6],
       },
     },
+    goal_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    total_goal_days: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   },
-  {
     hooks: {
-      beforeCreate: async (newUserData) => {
+      beforeCreate: async (newUserData) =>{
         newUserData.password = await bcrypt.hash(newUserData.password, 7);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 7);
         return updatedUserData;
+      },
     },
-  },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: 'user',
   }
 );
 
