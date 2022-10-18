@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { User, Exercises, Goals, Tracking_Log } = require('../models/index')
+
 // const { User}
 
 // GET all content for homepage
@@ -24,6 +26,22 @@ router.get('/success', (req, res) => {
 // program route
 router.get('/programs', withAuth, async(req, res) => {
    res.render('programs', {})
+})
+
+// program route
+router.get('/myAccount', withAuth, async(req, res) => {
+  try{
+    const data = await User.findByPk(req.session.userId, {
+    include: [Tracking_Log]
+  });
+  const info = data.get({ plain: true });
+  res.render('myAccount', { info, loggedIn: req.session.loggedIn })
+  } 
+  catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
 })
 
 // challenge route

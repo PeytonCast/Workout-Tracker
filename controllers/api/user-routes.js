@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
            console.log("sent: " + info.response)
        })
     req.session.save(() => {
-      req.session.user_id = dbUserData.id;
+      req.session.userId = dbUserData.id;
       req.session.loggedIn = true;
 
       res.status(201).json(dbUserData);
