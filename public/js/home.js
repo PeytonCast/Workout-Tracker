@@ -19,9 +19,9 @@ document
 .getElementById('renderProgram')
 .addEventListener("click", renderPrograms)
 
-// document
-// .getElementById('render-signup')
-// .addEventListener("click", renderSignup)
+document
+.getElementById('render-signup')
+.addEventListener("click", renderSignup)
 
 document
 .getElementById('renderChallenges')
