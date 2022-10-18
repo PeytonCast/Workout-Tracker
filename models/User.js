@@ -12,7 +12,7 @@ class User extends Model {
 }
 
 User.init(
-  {
+{
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -23,7 +23,8 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      email: {
+    },
+    email: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -46,6 +47,7 @@ User.init(
       allowNull: true,
     },
   },
+  {
     hooks: {
       beforeCreate: async (newUserData) =>{
         newUserData.password = await bcrypt.hash(newUserData.password, 7);
@@ -61,7 +63,8 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
-  }
+  
+}
 );
 
 module.exports = User;
