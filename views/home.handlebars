@@ -12,16 +12,14 @@
 
 <section>
     <div class="flex flex-col h-3/4 border bg-slate-300">
-        <div class="m-1 h-full col-span-3  grid grid-cols-4 gap-4 p-3">
+        <div class="m-1 h-full col-span-3  grid grid-cols-3 gap-3 p-3">
             <div class="workout-text card border-4 bg-slate-300 rounded-none sm:grid sm:grid-cols-12" id="workout">
                 <button id="renderWorkouts">WORKOUTS</button>
             </div>
             <div class="goals-text card border-4 bg-slate-300 rounded-none sm:grid sm:grid-cols-12" id="goals">
               <button id="renderProgram">GOALS</button>
             </div>
-            <div class="challenges-text card border-4 bg-slate-300 rounded-none sm:grid sm:grid-cols-12" id="challenges">
-               <button id="renderChallenges">CHALLENGES</button>
-            </div>
+         
              <div class="nutrition-text card border-4 bg-slate-300 rounded-none sm:grid sm:grid-cols-12" id="nutrition">
                 <button id="renderNutrition">NUTRITION</button>
             </div>
@@ -30,17 +28,21 @@
 </section>
 
 <section>
-    <div class="flex flex-col h-1/2 bg-slate-900">
-        <div class="m-1 h-full col-span-3  grid grid-cols-2 gap-2 p-3">
-            <div class="grid grid-rows-2 bg-slate-300 border rounded-2xl border-2 p-3">
-                <div class="tracker bg-slate-300 h-20 ">Workout Tracker</div> 
-            </div>
-            <div class="grid grid-rows-2 bg-slate-300 border rounded-2xl border-2 p-3">
-                <div class="exercises bg-slate-300 h-20 ">Exercises Completed</div>
-                
-            </div>
-        </div>
+  <div class="flex flex-col h-1/2 bg-slate-600 p-3 m-3">
+    <div class="m-1 h-full col-span-3 grid grid-cols-2 gap-2 p-3">
+      <div
+        class="grid grid-rows-2 bg-slate-200 border rounded-2xl border-2 p-3"
+      >
+        <div class="tracker bg-slate-300 h-20">Workout Tracker</div>
+      </div>
+      <div
+        class="grid grid-rows-2 bg-slate-400 border rounded-2xl border-2 p-3"
+      >
+        <div class="exercises bg-slate-300 h-20">Progress Tracker </div>
+
+      </div>
     </div>
+  </div>
 </section>
 {{#if loggedIn}}
 <script src="/js/homeLI.js"></script>
