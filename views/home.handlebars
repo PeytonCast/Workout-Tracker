@@ -1,14 +1,22 @@
-{{#if loggedIn}}
-{{else}}
 <section>
-    <div class="picture">
+{{#if loggedIn}}
+
+ <div class="picture">
         <div class="picture-text">
             <h1>Work It Out</h1>
-            <button id="render-signup">Sign Up!</button>
         </div>
-</section>
-{{/if}}
+ </div>
+{{else}}
 
+   <div class="picture">
+        <div class="picture-text">
+            <h1>Work It Out</h1>
+             <button id="render-signup">Sign Up!</button>
+        </div>
+    </div>
+
+{{/if}}
+</section>
 
 <section>
     <div class="flex flex-col h-3/4 border bg-slate-300">

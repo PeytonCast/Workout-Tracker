@@ -19,7 +19,7 @@
     <div class="container">
       <!--This contains the two navbars split into two. 
         One contains the categories for exercises, the other contains user info -->
-      <nav
+      {{!-- <nav
         class="container-fluid w-screen flex h-12 sm:grid sm:grid-cols-1 bg-slate-600 justify-start sm:flex sm:justify-center lg:flex"
       >
         <div class="navbar">
@@ -30,23 +30,23 @@
           <a href="#Yoga">Yoga</a>
 
         </div>
-      </nav>
+      </nav> --}}
+      {{!-- justify-start sm:flex sm:justify-center lg:flex --}}
       <nav
-        class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-300 justify-start sm:flex sm:justify-center lg:flex"
+        class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-600 "
       >
-        <div class="navbar2">
-
-          <a href="#Nutrition">Nutrition</a>
-          <a href="/">Work It Out</a>
+        <ol class="navbar">
+            <li><a href="/">Work It Out</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            {{#if loggedIn}}
+            <li><a href="/myAccount">MyAccount</a></li>
           <!-- Conditionally render login or logout links class="no-button" -->
-          {{#if loggedIn}}
-
-            <a href="/MyAccount">MyAccount</a>
-            <button id="logout">logout</button>
+            <li><button id="logout">logout</button></li>
           {{else}}
-            <a href="/login">Login</a>
+            <li><a href="/login">Login</a></li>
           {{/if}}
-        </div>
+          
+        </ol>
       </nav>
 
       <main class="w-screen h-100">

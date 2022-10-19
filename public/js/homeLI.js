@@ -1,9 +1,7 @@
 function renderPrograms() {
   document.location.replace("/programs");
 }
-function renderChallenges() {
-  document.location.replace("/challenges");
-}
+
 function renderNutrition() {
   document.location.replace("/nutrition");
 }

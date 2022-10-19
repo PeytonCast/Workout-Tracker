@@ -79,6 +79,12 @@ body {
   position: relative;
 }
 
+#logout {
+  margin-top: 9px;
+  color: white;
+}
+
+
 .goals-text button {
   text-align: center;
   font-size: 40px;
@@ -138,6 +144,7 @@ body {
   color: white;
 }
 
+
 .goals {
   font-size: 30px;
   text-align: center;
@@ -158,14 +165,7 @@ body {
   margin: auto;
   text-align: center;
 }
-.navbar a {
-  padding: 80px;
-  margin: 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  width: 25%;
-}
+
 .navbar2 a {
   padding: 80px;
   margin: 20px;
@@ -215,3 +215,28 @@ body {
   margin-top: 15px;
   text-align: center;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+
+li a {
+  color: white;
+  display: block;
+  padding: 8px;
+  /* background-color: #dddddd; */
+}
+
+#successful {
+margin: 6rem;
+padding: 30px;
+}
+
