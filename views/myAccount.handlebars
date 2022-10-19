@@ -2,7 +2,33 @@
   <div class="diarySection h-0.4 bg-slate-300 m-5">
     <div class="programName">My A C C O U N T</div>
   </div>
-  <h3>username: {{info.username}}</h3>
-  <h3>email: {{info.email}}</h3>
   {{!-- i think a diary will show here --}}
+</section>
+<section>
+  
+    {{#each info.tracking_logs}}
+    <div class="bg-slate-300 mb-2 p-2 border rounded-2xl">
+    <P>day: {{format_date this.createdAt}}</P>
+    <p>note: {{this.comments}}</p>
+    <p>watched video: {{this.watched_video}}</p>
+    </div>
+    {{/each}}
+  
+</section>
+<section>
+  <div class="flex flex-col h-1/2 bg-slate-600 p-3 m-3">
+    <div class="m-1 h-full col-span-3 grid grid-cols-2 gap-2 p-3">
+      <div
+        class="grid grid-rows-2 bg-slate-200 border rounded-2xl border-2 p-3"
+      >
+        <div class="tracker bg-slate-300 h-20">Workout Tracker</div>
+      </div>
+      <div
+        class="grid grid-rows-2 bg-slate-400 border rounded-2xl border-2 p-3"
+      >
+        <div class="exercises bg-slate-300 h-20">Progress Tracker </div>
+
+      </div>
+    </div>
+  </div>
 </section>
