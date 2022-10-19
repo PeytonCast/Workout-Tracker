@@ -32,11 +32,13 @@ router.get('/programs', withAuth, async(req, res) => {
 router.get('/myAccount', withAuth, async(req, res) => {
   try{
     const data = await User.findByPk(req.session.userId, {
-    include: [Tracking_Log]
+    include: [{model:Tracking_Log}]
   });
+  // res.json(data)
   const info = data.get({ plain: true });
   res.render('myAccount', { info, loggedIn: req.session.loggedIn })
   } 
+   
   catch (err) {
     console.log(err);
     res.status(500).json(err);
