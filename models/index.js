@@ -1,8 +1,8 @@
-const User = require('./User');
-const Goals = require('./Goals');
-const Exercises = require('./Exercises');
-const Goal_Exercises = require('./Goal_Exercises');
-const Tracking_Log = require('./Tracking_Log');
+const User = require('./user');
+const Goals = require('./goals');
+const Exercises = require('./exercises');
+const Goal_Exercises = require('./goal_exercises');
+const Tracking_Log = require('./tracking_log');
 
 User.hasMany(Goals, {
     foreignKey: 'id',
