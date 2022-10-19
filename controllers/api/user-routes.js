@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Tracking_Log } = require('../../models');
 const withAuth = require('../../utils/auth');
 const nodemailer = require('nodemailer')
 
@@ -99,6 +99,16 @@ router.post('/logout', (req, res) => {
     }
 });
 
-
+router.post('/diary', async (req, res) => {
+  try {
+    const diary = await Tracking_Log.create({
+      userId: req.session.userId,
+      comments: req.body.comments
+    })
+    res.status(200).json(diary)
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
 module.exports = router;

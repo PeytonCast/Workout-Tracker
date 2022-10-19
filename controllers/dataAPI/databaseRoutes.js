@@ -60,7 +60,7 @@ router.get('/exercises/', (req, res) => {
 router.post('/tracking-log', (req, res) => {
  
   Tracking_Log.create({
-    id: 1, // todo autoincrement
+    // id: 1, // todo autoincrement
     date: "May 1, 2022", // mysql now(), today()
     user_id: req.session.userId,
     watched_video: req.body.watched_video,
