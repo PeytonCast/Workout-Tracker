@@ -191,3 +191,8 @@ li a {
   padding: 8px;
   /* background-color: #dddddd; */
 }
+
+#successful {
+margin: 6rem;
+padding: 30px;
+}
