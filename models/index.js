@@ -1,27 +1,27 @@
 const User = require('./User');
 const Goals = require('./Goals');
 const Exercises = require('./Exercises');
-const Goal_Exercises = require('./Goal_Exercises');
-const Tracking_Log = require('./Tracking_Log');
+const GoalExercises = require('./GoalExercises');
+const TrackingLog = require('./TrackingLog');
 
 User.hasMany(Goals, {
     foreignKey: 'id',
     onDelete: 'CASCADE',
 });
 
-User.hasMany(Tracking_Log, {
-    foreignKey: 'user_id',
+User.hasMany(TrackingLog, {
+    foreignKey: 'userId',
     onDelete: 'CASCADE',
 });
 
-Goals.hasMany(Goal_Exercises, {
-    foreignKey: 'goal_id',
+Goals.hasMany(GoalExercises, {
+    foreignKey: 'goalId',
     onDelete: 'CASCADE',
 });
 
-Exercises.hasMany(Goal_Exercises, {
-    foreignKey: 'exercise_id',
+Exercises.hasMany(GoalExercises, {
+    foreignKey: 'exerciseId',
     onDelete: 'CASCADE',
 });
 
-module.exports = { User, Goals, Exercises, Goal_Exercises, Tracking_Log };
+module.exports = { User, Goals, Exercises, GoalExercises, TrackingLog };
