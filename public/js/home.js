@@ -1,34 +1,33 @@
-
 function renderPrograms() {
-    document.location.replace('/programs')
+  document.location.replace("/programs");
 }
 
 function renderNutrition() {
-    document.location.replace('/nutrition')
+  document.location.replace("/nutrition");
 }
 function renderWorkouts() {
-    document.location.replace('/workouts')
+  document.location.replace("/workouts");
 }
 function renderSignup() {
-    document.location.replace('signup')
+  document.location.replace("signup");
 }
 
 document
-.getElementById('renderProgram')
-.addEventListener("click", renderPrograms)
+  .getElementById("renderProgram")
+  .addEventListener("click", renderPrograms);
 
 document
-.getElementById('render-signup')
-.addEventListener("click", renderSignup)
+  .getElementById("render-signup")
+  .addEventListener("click", renderSignup);
 
 document
-.getElementById('renderChallenges')
-.addEventListener("click", renderChallenges)
+  .getElementById("renderChallenges")
+  .addEventListener("click", renderChallenges);
 
 document
-.getElementById('renderNutrition')
-.addEventListener("click", renderNutrition)
+  .getElementById("renderNutrition")
+  .addEventListener("click", renderNutrition);
 
 document
-.getElementById('renderWorkouts')
-.addEventListener("click", renderWorkouts)
+  .getElementById("renderWorkouts")
+  .addEventListener("click", renderWorkouts);
