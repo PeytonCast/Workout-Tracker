@@ -1,14 +1,23 @@
 [
   {
     "username": "Sal",
-    "password": "password12345"
+    "password": "password",
+    "email":"another_fake.mail@icloud.com",
+    "goal_id": 1,
+    "total_goal_days": 21
   },
   {
     "username": "Lernantino",
-    "password": "password12345"
+    "password": "password12345",
+    "email":"thisfake.mail@icloud.com",
+    "goal_id": 1,
+    "total_goal_days": 30
   },
   {
     "username": "Amiko",
-    "password": "password12345"
+    "password": "password12345",
+    "email":"fake.mail@icloud.com",
+    "goal_id": 2,
+    "total_goal_days": 60
   }
 ]

@@ -1,0 +1,14 @@
+[
+    {
+      "user_id": 1,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was hard"
+    },
+    {
+      "user_id": 1,
+      "workout_date": "2-1-2023",
+      "watched_video": true,
+      "comments": "Today was easy"
+    }
+  ]
