@@ -240,3 +240,7 @@ margin: 6rem;
 padding: 30px;
 }
 
+#date, #comments {
+  color: black !important;
+}
+
