@@ -108,6 +108,8 @@ router.post('/diary', async (req, res) => {
     })
     res.status(200).json(diary)
   } catch (error) {
+    
+    console.log(error) 
     res.status(500).json(error);
   }
 });

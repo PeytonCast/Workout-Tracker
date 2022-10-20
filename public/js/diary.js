@@ -1,16 +1,18 @@
 const programFormHandler = async (event) => {
     event.preventDefault();
 
-    const comments = document.querySelector('#comments').value;
-    const workoutDate = document.querySelector('#date').value;
+    const comments = document.querySelector('#comments');
+    const workoutDate = document.querySelector('#date');
 
     if(comments) {
         const response = await fetch('api/users/diary', {
             method: 'POST',
-            body: JSON.stringify({ comments, workoutDate }), 
+            body: JSON.stringify({ comments: comments.value, workoutDate: workoutDate.value }), 
             headers: { 'content-Type': 'application/json'}
-        });
-    }
+        }); console.log(response)
+        comments.value=""
+        workoutDate.value=""
+    } 
 };
 
 document
