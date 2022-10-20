@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Tracking_Log } = require('../../models');
+const { User, Tracking_Log, Goals } = require('../../models');
 const withAuth = require('../../utils/auth');
 const nodemailer = require('nodemailer')
 
@@ -103,9 +103,23 @@ router.post('/diary', async (req, res) => {
   try {
     const diary = await Tracking_Log.create({
       userId: req.session.userId,
-      comments: req.body.comments
+      comments: req.body.comments, 
+      workoutDate: req.body.workoutDate
     })
     res.status(200).json(diary)
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+router.post('/goals', async (req, res) => {
+  try {
+    const goals = await Goals.create({
+      buildmuscle: req.session.checkbox,
+      flexandtone: req.body.checkbox, 
+      cardiocondition: req.body.checkbox
+    })
+    res.status(200).json(goals)
   } catch (error) {
     res.status(500).json(error);
   }
