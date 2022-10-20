@@ -4,9 +4,10 @@ const Exercises = require('./Exercises');
 const GoalExercises = require('./GoalExercises');
 const TrackingLog = require('./TrackingLog');
 
-User.hasMany(Goals, {
+User.hasOne(Goals, {
     foreignKey: 'id',
     onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
 });
 
 User.hasMany(TrackingLog, {

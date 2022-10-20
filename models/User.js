@@ -41,6 +41,10 @@ User.init(
     goalId: {
       type: DataTypes.INTEGER,
       allowNull: true,
+      references: {
+        model: 'goals',
+        key: 'id',
+      }
     },
     totalGoalDays: {
       type: DataTypes.INTEGER,

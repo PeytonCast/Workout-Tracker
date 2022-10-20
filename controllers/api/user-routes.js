@@ -130,17 +130,17 @@ router.put('/goals/:id', async (req, res) => {
   }
 });
 
-router.post('/goals', async (req, res) => {
-  try {
-    const goals = await Goals.create({
-      buildmuscle: req.session.checkbox,
-      flexandtone: req.body.checkbox, 
-      cardiocondition: req.body.checkbox
-    })
-    res.status(200).json(goals)
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+// router.post('/goals', async (req, res) => {
+//   try {
+//     const goals = await Goals.create({
+//       buildmuscle: req.session.checkbox,
+//       flexandtone: req.body.checkbox, 
+//       cardiocondition: req.body.checkbox
+//     })
+//     res.status(200).json(goals)
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
 
 module.exports = router;

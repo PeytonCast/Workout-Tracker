@@ -29,8 +29,9 @@ router.get('/programs', withAuth, async(req, res) => {
     const data = await User.findByPk(req.session.userId, {
     include: [{model:Goals}]
   });
-  // res.json(data)
+
   const info = data.get({ plain: true });
+  // res.json(info)
    res.render('programs', {info, userId: req.session.userId})
 }
 catch (err) {

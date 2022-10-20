@@ -15,7 +15,7 @@ const goalFormHandler = async (event) => {
       
     //   redirects location to the home page
       if (response.ok) {
-        
+        // console.log(document.querySelector("#goal-one").checked)
         document.location.replace('/programs')
         // extra to make sure the page loads the changes
         document.location.replace('/programs')
@@ -59,5 +59,5 @@ const goalFormHandler = async (event) => {
  
   
   document
-    .querySelector('.goals-form')
+    .querySelector('.goals-form-upd')
     .addEventListener('submit', goalFormHandler);
