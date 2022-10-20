@@ -1,20 +1,26 @@
 [
   {
+    "id": 1,
     "username": "Sal",
+    "email": "kristen.mickel@gmail.com",
     "password": "password12345",
-    "goal_id": "1",
-    "total_goal_days": 30
+    "goalId": "1",
+    "totalGoalDays": 30
   },
   {
+    "id": 2,
     "username": "Lernantino",
+    "email": "kristen.mickel@gmail.com",
     "password": "password12345",
-    "goal_id": "2",
-    "total_goal_days": 30
+    "goalId": "2",
+    "totalGoalDays": 30
   },
   {
+    "id": 3,
     "username": "Amiko",
+    "email": "kristen.mickel@gmail.com",
     "password": "password12345",
-    "goal_id": "3",
-    "total_goal_days": 30
+    "goalId": "3",
+    "totalGoalDays": 30
   }
 ]

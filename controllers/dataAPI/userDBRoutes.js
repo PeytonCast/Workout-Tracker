@@ -20,32 +20,4 @@ router.put('/:id', async (req, res) => {
     }
   });
 
-  //------------------------------------------------------------------------------------
-//API 5: GET
-//This API will return the user's progress to the browser. SQL in the DB will determine if the user met their total goal based on a certain percentage once they meet their total_goal_days
 
-// GET a single user
-router.get('/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id, {
-      include: [{ model: Tracking_Log }],
-      attributes: {
-        include: [
-          [
-            sequelize.literal( 
-              '(SELECT COUNT(workout_dates) AS yes_days FROM tracking_log WHERE watched_video = "YES")' //Need to decide what kind of response is returned - checkbox with boolean or YES/NO?
-              //Need to add division of yes_days/COUNT(workout_dates) to get a percentage
-            ),
-            'daysGoalCompleted', 
-          ],
-        ],
-      },
-    });
-
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-module.exports = router;

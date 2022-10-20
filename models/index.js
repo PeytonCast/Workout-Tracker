@@ -19,6 +19,11 @@ Goals.hasMany(GoalExercises, {
     onDelete: 'CASCADE',
 });
 
+GoalExercises.hasMany(Exercises, {
+    foreignKey: 'exerciseId',
+    //onDelete: 'CASCADE',
+});
+
 Exercises.hasMany(GoalExercises, {
     foreignKey: 'exerciseId',
     onDelete: 'CASCADE',
