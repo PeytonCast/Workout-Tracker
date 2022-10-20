@@ -79,6 +79,12 @@ body {
   position: relative;
 }
 
+#logout {
+  margin-top: 9px;
+  color: white;
+}
+
+
 .goals-text button {
   text-align: center;
   font-size: 40px;
@@ -122,6 +128,11 @@ body {
   position: relative;
 }
 
+.programName {
+  font-size: 80px;
+  text-align: center;
+}
+
 .nutrition-text button {
   text-align: center;
   font-size: 40px;
@@ -132,14 +143,29 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
-.navbar a {
-  padding: 80px;
-  margin: 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  width: 25%;
+
+
+.goals {
+  font-size: 30px;
+  text-align: center;
 }
+.diaryName {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+}
+.diaryText {
+  color: white;
+  font-size: 25px;
+}
+.diaryEntry {
+  font-size: 25px;
+  color: white;
+
+  margin: auto;
+  text-align: center;
+}
+
 .navbar2 a {
   padding: 80px;
   margin: 20px;
@@ -157,7 +183,23 @@ body {
   text-align: center;
   font-size: 20px;
 }
+.recipeTitle {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.workTitle {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
 
+.goalsBtn {
+  text-align: center;
+  font-size: 20px;
+  width: 100px;
+  margin: auto;
+}
 .signBtn {
   text-align: center;
   font-size: 20px;
@@ -167,3 +209,34 @@ body {
   padding: 30px;
   margin-left: 90px;
 }
+
+.diaryBtn {
+  margin-left: 650px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+
+li a {
+  color: white;
+  display: block;
+  padding: 8px;
+  /* background-color: #dddddd; */
+}
+
+#successful {
+margin: 6rem;
+padding: 30px;
+}
+

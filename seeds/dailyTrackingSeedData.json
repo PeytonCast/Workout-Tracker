@@ -1,0 +1,38 @@
+[
+    {
+      "user_id": 3,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was hard"
+    },
+    {
+      "user_id": 3,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was fun"
+    },
+    {
+      "user_id": 2,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was boring"
+    },
+    {
+      "user_id": 1,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was hard"
+    },
+    {
+      "user_id": 1,
+      "workout_date": "1-1-2023",
+      "watched_video": true, 
+      "comments": "Today was wow"
+    },
+    {
+      "user_id": 2,
+      "workout_date": "2-1-2023",
+      "watched_video": true,
+      "comments": "Today was easy"
+    }
+  ]
