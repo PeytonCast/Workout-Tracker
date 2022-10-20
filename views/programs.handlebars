@@ -21,12 +21,11 @@
            <label for="goal-two">Gain Muscle</label><br />
 
           <input
-            type="checkbox"
+            type="checkbox" class="checkbox"
             id="goal-three"
             name="goal-three"
             value="3"
           /> <label for="goal-three">cardiovascular conditioning</label><br />
-
           
    <input class="diaryBtn btn-primary border-2 bg-slate-500 p-2 m-4 rounded-2xl" type="submit" value="submit">
         </form>
@@ -78,7 +77,7 @@
 
   </div>
 </section>
-
+{{!-- get id info and value and pass to body in diary.js --}}
 <section>
   <div class="flex flex-col bg-slate-300 p-3 m-3">
     <div class="m-1 col-span-3 grid grid-rows-1 gap-2 p-3 sm:grid-cols-1">
@@ -91,4 +90,6 @@
     </div>
   </div>
 </section>
+
+<script src="/js/diary.js"></script>
 <script src="/js/goals.js"></script>

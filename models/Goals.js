@@ -14,6 +14,18 @@ Goals.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    buildmuscle: {
+      type: DataTypes.BOOLEAN, 
+      defaultValue: false
+    },
+    flexandtone: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    cardiocondition: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   },
   {
     sequelize,

@@ -236,6 +236,10 @@ li a {
   padding: 30px;
 }
 
+#date, #comments {
+  color: black !important;
+}
+
 .footerName {
   font-size: 30px;
   text-align: center;
