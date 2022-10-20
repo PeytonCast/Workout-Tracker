@@ -21,10 +21,6 @@ document
   .addEventListener("click", renderSignup);
 
 document
-  .getElementById("renderChallenges")
-  .addEventListener("click", renderChallenges);
-
-document
   .getElementById("renderNutrition")
   .addEventListener("click", renderNutrition);
 
