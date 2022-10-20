@@ -1,4 +1,5 @@
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,33 +21,63 @@
       <!--This contains the two navbars split into two. 
         One contains the categories for exercises, the other contains user info -->
       {{! <nav
-        class="container-fluid w-screen flex h-12 sm:grid sm:grid-cols-1 bg-slate-600 justify-start sm:flex sm:justify-center lg:flex"
-      >
-        <div class="navbar">
+      class="container-fluid w-screen flex h-12 sm:grid sm:grid-cols-1 bg-slate-600 justify-start sm:flex sm:justify-center lg:flex">
+      <div class="navbar">
 
-          <a href="#Weight Lifting">Weight Lifting</a>
-          <a href="#HIIT">HIIT</a>
-          <a href="#Walking">Walking</a>
-          <a href="#Yoga">Yoga</a>
+        <a href="#Weight Lifting">Weight Lifting</a>
+        <a href="#HIIT">HIIT</a>
+        <a href="#Walking">Walking</a>
+        <a href="#Yoga">Yoga</a>
 
-        </div>
-      </nav> }}
+      </div>
+    </nav> }}
       {{! justify-start sm:flex sm:justify-center lg:flex }}
       <nav
         class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-600 sm:flex"
       >
-        <ol class="navbar">
-          <li><a href="/">Work It Out</a></li>
-          <li><a href="/nutrition">Nutrition</a></li>
-          {{#if loggedIn}}
-            <li><a href="/myAccount">MyAccount</a></li>
-            <!-- Conditionally render login or logout links class="no-button" -->
-            <li><button id="logout">Logout</button></li>
-          {{else}}
-            <li><a href="/login">Login</a></li>
-          {{/if}}
+        <div
+          class="container flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="/">Work It Out</a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="navBTN inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="navbar flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+            >
 
-        </ol>
+              <li><a href="/nutrition" class="block">Nutrition</a></li>
+              {{#if loggedIn}}
+                <li><a href="/myAccount" class="block">MyAccount</a></li>
+                <!-- Conditionally render login or logout links class="no-button" -->
+                <li><button id="logout">Logout</button></li>
+              {{else}}
+                <li><a href="/login" class="block">Login</a></li>
+              {{/if}}
+
+            </ul>
+          </div>
+        </div>
       </nav>
 
       <main class="w-screen h-100">

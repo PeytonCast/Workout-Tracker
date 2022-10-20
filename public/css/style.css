@@ -219,7 +219,7 @@ ul {
 }
 
 li {
-  float: left;
+  float: right;
   margin-left: 2%;
   margin-right: 5%;
 }
@@ -236,7 +236,8 @@ li a {
   padding: 30px;
 }
 
-#date, #comments {
+#date,
+#comments {
   color: black !important;
 }
 
