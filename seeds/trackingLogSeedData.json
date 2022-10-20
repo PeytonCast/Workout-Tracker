@@ -1,14 +1,20 @@
 [
     {
-      "user_id": 1234,
-      "workout_date": "1",
-      "watched_video": "Yes", 
+      "userId": 1,
+      "workoutDate": "1",
+      "watchedVideo": "Yes", 
       "comments": "Today was hard"
     },
     {
-      "user_id": 5678,
-      "workout_date": "1",
-      "watched_video": "Yes", 
+      "userId": 2,
+      "workoutDate": "1",
+      "watchedVideo": "Yes", 
+      "comments": "Today was easy"
+    },
+    {
+      "userId": 3,
+      "workoutDate": "1",
+      "watchedVideo": "Yes", 
       "comments": "Today was easy"
     }
   ]

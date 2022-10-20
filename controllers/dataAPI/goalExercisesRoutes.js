@@ -8,19 +8,32 @@ const { GoalExercises, Exercises } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const goalExercisesData = await GoalExercises.findAll({
-      include: [{ model: Exercises }], //will this pull in the exercise name?
-      where: {
-        id: req.params.goalId //will this search by the goal id?
-      },
-      attributes: {
-        exclude: ['goalId, exerciseId'],
-      }, //Exercise 9
-    });
-    res.status(200).json(goalExercisesData);
+    console.log("message1")
+    const exercisesData = await Exercises.findAll({ include: [{model: GoalExercises, required: true}]});
+
+    /* 
+    
+     {
+        "id": 1,
+        "name": "Strength training - Back",
+        "exerciseId": null,
+        "goalExercises": [
+            {
+                "id": 4,
+                "goalId": 2,
+                "exerciseId": 1
+            }
+        ]
+    },
+
+    {id: 4, goalId: 2, exercises: [{id, name, }]}
+    */
+    res.status(200).json(exercisesData);
   } catch (err) {
+    console.log("message", err)
     res.status(500).json(err);
   }
 });
 
 module.exports = router;
+
