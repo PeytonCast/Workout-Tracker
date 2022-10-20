@@ -110,5 +110,23 @@ router.post('/diary', async (req, res) => {
     res.status(500).json(error);
   }
 });
+// update change goals
+// when a user selects a goal then the option will have a goal id value
+router.put('/goals/:id', async (req, res) => {
+  try {
+    const update = await User.update(
+      {
+        goalId: req.body.goal_id
+      },
+      { where: {
+          id: req.params.id, 
+          }
+      }
+      );
+    res.status(200).json(update);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
