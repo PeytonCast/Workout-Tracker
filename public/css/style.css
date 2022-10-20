@@ -3,13 +3,13 @@ body {
 }
 
 .exercises {
-  font-size: 50px;
+  font-size: 30px;
   color: black;
   font-weight: 300;
   text-align: center;
 }
 .tracker {
-  font-size: 50px;
+  font-size: 30px;
   color: black;
   font-weight: 300;
 
@@ -84,7 +84,6 @@ body {
   color: white;
 }
 
-
 .goals-text button {
   text-align: center;
   font-size: 40px;
@@ -129,7 +128,7 @@ body {
 }
 
 .programName {
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
 }
 
@@ -143,7 +142,6 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
-
 
 .goals {
   font-size: 30px;
@@ -211,8 +209,6 @@ body {
 }
 
 .diaryBtn {
-  margin-left: 650px;
-  margin-top: 15px;
   text-align: center;
 }
 
@@ -236,7 +232,12 @@ li a {
 }
 
 #successful {
-margin: 6rem;
-padding: 30px;
+  margin: 6rem;
+  padding: 30px;
 }
 
+.footerName {
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+}

@@ -19,7 +19,7 @@
     <div class="container">
       <!--This contains the two navbars split into two. 
         One contains the categories for exercises, the other contains user info -->
-      {{!-- <nav
+      {{! <nav
         class="container-fluid w-screen flex h-12 sm:grid sm:grid-cols-1 bg-slate-600 justify-start sm:flex sm:justify-center lg:flex"
       >
         <div class="navbar">
@@ -30,22 +30,22 @@
           <a href="#Yoga">Yoga</a>
 
         </div>
-      </nav> --}}
-      {{!-- justify-start sm:flex sm:justify-center lg:flex --}}
+      </nav> }}
+      {{! justify-start sm:flex sm:justify-center lg:flex }}
       <nav
-        class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-600 "
+        class="container-fluid flex w-screen h-12 sm:grid sm:grid-cols-1 bg-slate-600 sm:flex"
       >
         <ol class="navbar">
-            <li><a href="/">Work It Out</a></li>
-            <li><a href="/nutrition">Nutrition</a></li>
-            {{#if loggedIn}}
+          <li><a href="/">Work It Out</a></li>
+          <li><a href="/nutrition">Nutrition</a></li>
+          {{#if loggedIn}}
             <li><a href="/myAccount">MyAccount</a></li>
-          <!-- Conditionally render login or logout links class="no-button" -->
-            <li><button id="logout">logout</button></li>
+            <!-- Conditionally render login or logout links class="no-button" -->
+            <li><button id="logout">Logout</button></li>
           {{else}}
             <li><a href="/login">Login</a></li>
           {{/if}}
-          
+
         </ol>
       </nav>
 
@@ -53,14 +53,17 @@
         {{{body}}}
       </main>
 
-      <footer>
-
-      </footer>
     </div>
 
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
   </body>
+
+  <footer>
+    <div class="footerSection w-screen bg-slate-500 p-3">
+      <div class="footerName">Work It Out</div>
+    </div>
+  </footer>
 
 </html>
