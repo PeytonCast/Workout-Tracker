@@ -25,9 +25,20 @@ router.get('/success', (req, res) => {
 
 // program route
 router.get('/programs', withAuth, async(req, res) => {
-  
-   res.render('programs', {userId: req.session.userId})
-})
+  try{
+    const data = await User.findByPk(req.session.userId, {
+    include: [{model:Goals}]
+  });
+  // res.json(data)
+  const info = data.get({ plain: true });
+   res.render('programs', {info, userId: req.session.userId})
+}
+catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+}
+)
 
 // program route
 router.get('/myAccount', withAuth, async(req, res) => {

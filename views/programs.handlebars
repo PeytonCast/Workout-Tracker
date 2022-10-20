@@ -5,7 +5,7 @@
       <div
         class="grid grid-rows-2 bg-slate-200 border rounded-2xl border-2 p-3"
       >
-        <div class="tracker bg-slate-300 h-20">Choose Your Goals</div>
+        <div class="tracker bg-slate-300 h-20">Choose a Goal</div>
         <form class="goals-form goals">
           <input id='goals-user-id' type="text" value="{{userId}}" hidden>
           <input
@@ -14,26 +14,32 @@
             name="goal-one"
             value="1"
           />
-          <label for="goal one">Flexibility and Tone</label><br />
+          <label for="goal-one">Flexibility and Tone</label><br />
+         
+         
           <input type="checkbox" id="goal-two" name="goal-two" value="2" />
-          <label for="vehicle2"> Build Muscle</label><br />
+           <label for="goal-two">Gain Muscle</label><br />
+
           <input
             type="checkbox"
             id="goal-three"
             name="goal-three"
             value="3"
-          />
-          <label for="goal-three"> Cardiovascular Conditioning</label>
+          /> <label for="goal-three">cardiovascular conditioning</label><br />
 
+          
+   <input class="diaryBtn btn-primary border-2 bg-slate-500 p-2 m-4 rounded-2xl" type="submit" value="submit">
         </form>
         {{!-- class="diaryBtn btn-primary border-2 bg-slate-500 p-2 m-4 rounded-2xl" --}}
-        <input  class="diaryBtn btn-primary border-2 bg-slate-500 p-2 m-4 rounded-2xl" type="submit" value="submit">
+     
       </div>
       <div
         class="grid grid-rows-2 bg-slate-400 border rounded-2xl border-2 p-3"
       >
         <div class="exercises bg-slate-300 h-20">Goals Chosen</div>
-
+         <div>
+          <p>{{goals.name}}</p>
+         </div>
       </div>
     </div>
   </div>
