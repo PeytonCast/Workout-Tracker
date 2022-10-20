@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Tracking_Log extends Model {}
+class TrackingLog extends Model {}
 
-Tracking_Log.init(
+TrackingLog.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,11 +20,11 @@ Tracking_Log.init(
       }
     },
     workoutDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.INTEGER, //Make this into DATA type?
       allowNull: true,
     },
     watchedVideo: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     comments: {
@@ -34,11 +34,11 @@ Tracking_Log.init(
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tracking_log',
+    modelName: 'trackingLog',
   }
 );
 
-module.exports = Tracking_Log;
+module.exports = TrackingLog;

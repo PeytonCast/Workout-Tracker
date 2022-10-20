@@ -1,17 +1,25 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Goal_Exercises extends Model {}
+class GoalExercises extends Model {}
 
-Goal_Exercises.init(
+GoalExercises.init(
   {
-    goal_id: {
+    goalId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'goals',
+        key: 'id',
+      }
     },
-    exercise_id: {
+    exerciseId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'exercises',
+        key: 'id',
+      }
     },
   },
   {
@@ -19,8 +27,8 @@ Goal_Exercises.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'goal_exercises',
+    modelName: 'goalExercises',
   }
 );
 
-module.exports = Goal_Exercises;
+module.exports = GoalExercises;

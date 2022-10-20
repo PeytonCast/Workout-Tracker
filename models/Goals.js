@@ -32,7 +32,7 @@ Goals.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Goals',
+    modelName: 'goals',
   }
 );
 

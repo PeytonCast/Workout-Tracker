@@ -38,11 +38,11 @@ User.init(
         len: [6],
       },
     },
-    goal_id: {
+    goalId: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    total_goal_days: {
+    totalGoalDays: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
