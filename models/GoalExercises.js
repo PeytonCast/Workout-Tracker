@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class GoalExercises extends Model {}
+class Goal_Exercises extends Model {}
 
-GoalExercises.init(
+Goal_Exercises.init(
   {
-    goalId: {
+    goal_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -13,7 +13,7 @@ GoalExercises.init(
         key: 'id',
       }
     },
-    exerciseId: {
+    exercise_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -31,4 +31,4 @@ GoalExercises.init(
   }
 );
 
-module.exports = GoalExercises;
+module.exports = Goal_Exercises;

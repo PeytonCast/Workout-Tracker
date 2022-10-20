@@ -2,44 +2,25 @@
   {
     "id": 1,
     "username": "Sal",
-<<<<<<< HEAD
     "password": "password",
     "email":"another_fake.mail@icloud.com",
-    "goal_id": 1,
+    "goalId": 1,
     "total_goal_days": 21
-=======
-    "email": "kristen.mickel@gmail.com",
-    "password": "password12345",
-    "goalId": "1",
-    "totalGoalDays": 30
->>>>>>> 3b7f7364820a474d6d6eaeb9b59f4372680edb1d
   },
   {
     "id": 2,
     "username": "Lernantino",
-    "email": "kristen.mickel@gmail.com",
     "password": "password12345",
-<<<<<<< HEAD
     "email":"thisfake.mail@icloud.com",
-    "goal_id": 1,
+    "goalId": 1,
     "total_goal_days": 30
-=======
-    "goalId": "2",
-    "totalGoalDays": 30
->>>>>>> 3b7f7364820a474d6d6eaeb9b59f4372680edb1d
   },
   {
     "id": 3,
     "username": "Amiko",
-    "email": "kristen.mickel@gmail.com",
     "password": "password12345",
-<<<<<<< HEAD
     "email":"fake.mail@icloud.com",
-    "goal_id": 2,
+    "goalId": 2,
     "total_goal_days": 60
-=======
-    "goalId": "3",
-    "totalGoalDays": 30
->>>>>>> 3b7f7364820a474d6d6eaeb9b59f4372680edb1d
   }
 ]

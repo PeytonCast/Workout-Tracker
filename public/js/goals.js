@@ -1,30 +1,63 @@
-const programGoalHandler = async (event) => {
+
+
+const goalFormHandler = async (event) => {
     event.preventDefault();
+    const id  = document.getElementById('goals-user-id').value.trim()
 
-    const checkbox = document.querySelectorAll('.checkbox');
-    let buildmuscle = false
-    let flexandtone = false
-    let cardiocondition = false
-    for (let i = 0; i < checkbox.length; i++) { 
-        if(checkbox[i].checked && checkbox[i].value === "Build Muscle") {
-            buildmuscle = true
-        } else if (checkbox[i].checked && checkbox[i].value === "Tone") {
-            flexandtone = true
-        } else if (checkbox[i].checked && checkbox[i].value === "Conditioning") {
-            cardiocondition = true
-        }
+    if (document.querySelector("#goal-one").checked) {
+      
+      const response = await fetch(`/api/users/goals/${id}`, {
+        method: 'put',
+        body: JSON.stringify({'goal_id': 1 }),
+        headers: { 'Content-Type': 'application/json' },
+       
+      });
+      
+    //   redirects location to the home page
+      if (response.ok) {
+        
+        document.location.replace('/programs')
+        // extra to make sure the page loads the changes
+        document.location.replace('/programs')
+      } else {
+        alert('please select one');
+      }
     }
-
-    alert(buildmuscle + " " + flexandtone + " " + cardiocondition)
-    
-        const response = await fetch('api/users/goals', {
-            method: 'POST',
-            body: JSON.stringify({ buildmuscle, flexandtone, cardiocondition }), 
-            headers: { 'content-Type': 'application/json'}
+    if (document.getElementById('goal-two').checked) {
+        const response = await fetch(`/api/users/goals/${id}`, {
+          method: 'PUT',
+          body: JSON.stringify({'goal_id': 2 }),
+          headers: { 'Content-Type': 'application/json' },
         });
-   
-};
-
-document
-.querySelector('.goalsBtn')
-.addEventListener('click', programGoalHandler);
+        
+       //redirects location to the home page
+        if (response.ok) {
+          document.location.replace('/programs')
+          // extra to make sure the page loads the changes
+          document.location.replace('/programs')
+        } else {
+          alert('error');
+        }
+      }
+      if (document.getElementById('goal-three').checked) {
+        const response = await fetch(`/api/users/goals/${id}`, {
+          method: 'PUT',
+          body: JSON.stringify({'goal_id': 3 }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+      //   redirects location to the home page
+        if (response.ok) {
+          document.location.replace('/programs')
+          // extra to make sure the page loads the changes
+          document.location.replace('/programs')
+        } else {
+          alert('error');
+        }
+      }
+  };
+  
+ 
+  
+  document
+    .querySelector('.goals-form')
+    .addEventListener('submit', goalFormHandler);

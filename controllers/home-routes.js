@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { User, Exercises, Goals, Tracking_Log } = require('../models/index')
+const { User, Exercises, Goals, TrackingLog } = require('../models/index')
 
 // const { User}
 
@@ -25,14 +25,26 @@ router.get('/success', (req, res) => {
 
 // program route
 router.get('/programs', withAuth, async(req, res) => {
-   res.render('programs', {})
-})
+  try{
+    const data = await User.findByPk(req.session.userId, {
+    include: [{model:Goals}]
+  });
+  // res.json(data)
+  const info = data.get({ plain: true });
+   res.render('programs', {info, userId: req.session.userId})
+}
+catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+}
+)
 
 // program route
 router.get('/myAccount', withAuth, async(req, res) => {
   try{
     const data = await User.findByPk(req.session.userId, {
-    include: [{model:Tracking_Log}]
+    include: [{model:TrackingLog}]
   });
   // res.json(data)
   const info = data.get({ plain: true });

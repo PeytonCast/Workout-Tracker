@@ -37,7 +37,7 @@ TrackingLog.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'trackingLog',
+    modelName: 'tracking_log',
   }
 );
 
