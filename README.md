@@ -10,8 +10,14 @@ The steps to use this application is to login and click workouts, goals, or nutr
 
 # Usage
 
+Screenshot of application
+![](public/js/Work%20It%20Out%20App%202.PNG)
+![](public/js/Work%20It%20Out%20App%203.PNG)
+![](public/js/Work%20It%20Out%20app.PNG)
+![](public/js/Work%20It%20Out%20node%20server.PNG)
+
 # Contributors 
-Anquavious, Kianna, Peyton, Joselyn, Kristine
+Anquavious, Kianna, Peyton, Joselyn, Kristin
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
